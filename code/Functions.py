@@ -141,7 +141,7 @@ def generate_emails(name_input, last_name_input, birth_input, username_input, sk
 def verify_emails(emails):
     # Verify email syntax
    regex = '^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$'
-    verified_emails = []
+   verified_emails = []
     for email in emails:
         match = re.match(regex, email)
         if match:
