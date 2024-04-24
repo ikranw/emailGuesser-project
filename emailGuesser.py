@@ -12,6 +12,37 @@ green = "\033[32m"
 blue = "\033[34m"
 yellow = "\033[33m"
 reset = "\033[39m"
+import re
+import requests
+from bs4 import BeautifulSoup
+import time
+import random
+import csv
+
+#function to get user inputs 
+def get_user_input():
+    while True:
+        name_input = input("Please enter name: ")
+        if not name_input.isalpha():
+            raise ValueError("Name and surname inputs must contain only letters.")
+        last_name_input = input("Please enter surname: ")
+        if not last_name_input.isalpha():
+            raise ValueError("Name and surname inputs must contain only letters.")
+        birth_input = input("Please enter birth year (or no): ")
+        username_input = input("Please enter username (or no): ")
+        skype_input = input("Would you like to automatically add to the pool Skype usernames from people using this name in Skype? (y/n): ")
+        if skype_input.lower() not in ['y', 'n']:
+            print("Please input 'y' or 'n'!")
+            continue
+        break
+    return name_input, last_name_input
+	
+# User inputs
+try:
+    name_input, last_name_input = get_user_input()
+except ValueError as ve:
+    print("Error:", ve)
+    exit()
 
 # Initial screen
 print("Welcome to " + green + "emailGuesser" + reset + "!\nDeveloped by " + blue + "White Hat Inspector (@WHInspector)" + reset + ".\nFor feedback and/or questions send me a private message on " + blue + "https://twitter.com/whinspector" + reset)
