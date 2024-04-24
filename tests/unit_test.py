@@ -1,4 +1,4 @@
 import pytest
-from Functions import get_user_input, 
+from Functions import collect_user_input, generate_emails
 
 
