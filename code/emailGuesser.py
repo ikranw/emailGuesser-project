@@ -20,7 +20,7 @@ import random
 import csv
 
 #function to get user inputs 
-def get_user_input(name, last_name):
+def get_user_input(name_input, last_name_input):
     while True:
         name_input = input("Please enter name: ")
         if not name_input.isalpha():
