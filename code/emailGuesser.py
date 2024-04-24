@@ -20,7 +20,7 @@ import random
 import csv
 
 #function to get user inputs 
-def get_user_input(name_input, last_name_input):
+""" def get_user_input(name_input, last_name_input):
     while True:
         name_input = input("Please enter name: ")
         if not name_input.isalpha():
@@ -35,7 +35,7 @@ try:
     name_input, last_name_input = get_user_input()
 except ValueError as ve:
     print("Error:", ve)
-    exit()
+    exit() """
 
 # Initial screen
 print("Welcome to " + green + "emailGuesser" + reset + "!\nDeveloped by " + blue + "White Hat Inspector (@WHInspector)" + reset + ".\nFor feedback and/or questions send me a private message on " + blue + "https://twitter.com/whinspector" + reset)
