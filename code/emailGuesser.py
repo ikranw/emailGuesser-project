@@ -28,13 +28,6 @@ def get_user_input():
         last_name_input = input("Please enter surname: ")
         if not last_name_input.isalpha():
             raise ValueError("Name and surname inputs must contain only letters.")
-        birth_input = input("Please enter birth year (or no): ")
-        username_input = input("Please enter username (or no): ")
-        skype_input = input("Would you like to automatically add to the pool Skype usernames from people using this name in Skype? (y/n): ")
-        if skype_input.lower() not in ['y', 'n']:
-            print("Please input 'y' or 'n'!")
-            continue
-        break
     return name_input, last_name_input
 	
 # User inputs
@@ -50,8 +43,8 @@ print("")
 
 # User inputs
 while True:
-	name_input = input(yellow + 'Please enter name: ' + reset)
-	last_name_input = input(yellow + "Please enter surname: " + reset)
+	#name_input = input(yellow + 'Please enter name: ' + reset)
+	#last_name_input = input(yellow + "Please enter surname: " + reset)
 	birth_input = input(yellow + "Please enter birth year (or no): " + reset)
 	username_input = input(yellow + "Please enter username (or no): " + reset)
 	skype_input = "blank"
