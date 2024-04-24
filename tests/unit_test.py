@@ -1,5 +1,5 @@
 import pytest
-from emailGuesser.py import name_input, last_name_input
+from emailGuesser.py import get_user_input
 
 # Test 1: test to make sure name and surname inputs/arguments are strings not numbers. 
 #STRING
